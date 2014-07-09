@@ -1,0 +1,12 @@
+
+Error! Failed to Execute Statement
+Error! Failed to Prepare Statement
+Error! Failed to Prepare Statement
+Error! Failed to Prepare Statement
+Error! Failed to Execute Statement
+Error! Failed to Prepare Statement: Unknown column 'date_created' in 'field list'
+Error! Failed to Execute Statement: Cannot add or update a child row: a foreign key constraint fails (`expense`.`expense_document`, CONSTRAINT `FKExpense` FOREIGN KEY (`expense`) REFERENCES `expense` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+Error! Failed to Prepare Statement: Unknown column 'date_created' in 'field list'
+Error! Failed to Execute Statement: Cannot add or update a child row: a foreign key constraint fails (`expense`.`expense_document`, CONSTRAINT `FKExpense` FOREIGN KEY (`expense`) REFERENCES `expense` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+Error! Failed to Execute Statement: Column 'status' cannot be null
+Error! Failed to Execute Statement: Cannot add or update a child row: a foreign key constraint fails (`expense`.`expense_document`, CONSTRAINT `FKExpense` FOREIGN KEY (`expense`) REFERENCES `expense` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
