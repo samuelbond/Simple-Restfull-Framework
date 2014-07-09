@@ -29,7 +29,7 @@
       <file leaf-file-name="StackTest.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/StackTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="7" selection-end="7" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="705">
+            <state line="10" column="4" selection-start="111" selection-end="236" vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="705">
               <folding>
                 <element signature="e#7#51#0" expanded="true" />
               </folding>
@@ -37,25 +37,40 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="abstractcomponentfactory.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/abstractcomponentfactory.php">
+      <file leaf-file-name="RouterTest.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/RouterTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="2" selection-start="292" selection-end="292" vertical-scroll-proportion="0.28944382" vertical-offset="0" max-vertical-offset="881">
+            <state line="9" column="23" selection-start="93" selection-end="93" vertical-scroll-proportion="0.15323496" vertical-offset="0" max-vertical-offset="881">
               <folding>
-                <element signature="e#6#171#0" expanded="true" />
+                <element signature="e#7#51#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="abstractentitymanager.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/abstractentitymanager.php">
+      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="3" selection-start="171" selection-end="171" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="3615">
-              <folding>
-                <element signature="e#6#171#0" expanded="true" />
-                <element signature="e#198#211#0" expanded="true" />
-              </folding>
+            <state line="15" column="0" selection-start="225" selection-end="225" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="555">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bootstrap.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bootstrap.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="47" column="79" selection-start="1222" selection-end="1222" vertical-scroll-proportion="-25.0" vertical-offset="0" max-vertical-offset="690">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="router.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/router.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="54" column="42" selection-start="1085" selection-end="1085" vertical-scroll-proportion="-17.333334" vertical-offset="289" max-vertical-offset="1440">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -81,7 +96,6 @@
         <option value="$PROJECT_DIR$/model/model.php" />
         <option value="$PROJECT_DIR$/model/databaseutil.php" />
         <option value="$PROJECT_DIR$/application/template.php" />
-        <option value="$PROJECT_DIR$/application/router.php" />
         <option value="$PROJECT_DIR$/application/registry.php" />
         <option value="$PROJECT_DIR$/application/basecomponent.php" />
         <option value="$PROJECT_DIR$/application/abstractcomponentfactory.php" />
@@ -95,16 +109,18 @@
         <option value="$PROJECT_DIR$/controller/indexController.php" />
         <option value="$PROJECT_DIR$/cli-config.php" />
         <option value="$PROJECT_DIR$/model/cms/proxy/__CG__modelcmsFile.php" />
-        <option value="$PROJECT_DIR$/bootstrap.php" />
         <option value="$PROJECT_DIR$/autoloader/autoloader.php" />
         <option value="$PROJECT_DIR$/model/cms/FileRepository.php" />
         <option value="$PROJECT_DIR$/model/cms/File.php" />
         <option value="$PROJECT_DIR$/model/Db.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/component/cms/entitymanager.php" />
         <option value="$PROJECT_DIR$/component/cms/cms.php" />
         <option value="$PROJECT_DIR$/application/abstractentitymanager.php" />
         <option value="$PROJECT_DIR$/application/baseentitymanager.php" />
+        <option value="$PROJECT_DIR$/application/router.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/bootstrap.php" />
+        <option value="$PROJECT_DIR$/test/RouterTest.php" />
       </list>
     </option>
   </component>
@@ -177,6 +193,34 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -306,7 +350,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controller/indexController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="27" selection-start="1075" selection-end="1075" vertical-scroll-proportion="0.0" vertical-offset="660" max-vertical-offset="825" />
+        <state line="44" column="27" selection-start="1075" selection-end="1075" vertical-scroll-proportion="0.0" vertical-offset="660" max-vertical-offset="825">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/model/cms/File.php">
@@ -345,12 +391,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controller/indexController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="27" selection-start="1075" selection-end="1075" vertical-scroll-proportion="0.0" vertical-offset="660" max-vertical-offset="825" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/component/expense/expense.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="2" selection-start="112" selection-end="112" vertical-scroll-proportion="0.06912442" vertical-offset="0" max-vertical-offset="2670" />
+        <state line="44" column="27" selection-start="1075" selection-end="1075" vertical-scroll-proportion="0.0" vertical-offset="660" max-vertical-offset="825">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/exceptions/invalidtypeException.php">
@@ -363,14 +406,6 @@
         <state line="6" column="14" selection-start="66" selection-end="66" vertical-scroll-proportion="0.052386496" vertical-offset="0" max-vertical-offset="859" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OldLicense.txt">
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1050" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/license.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="40" selection-start="40" selection-end="40" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="905" />
@@ -379,11 +414,6 @@
     <entry file="file://$PROJECT_DIR$/application/template.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="3" selection-start="171" selection-end="171" vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="1155" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/router.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="3" selection-start="171" selection-end="171" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="1530" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/registry.php">
@@ -399,16 +429,6 @@
     <entry file="file://$PROJECT_DIR$/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="1" selection-start="61" selection-end="61" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/archive/logoOnly.png1397214847.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/archive/logical architecture.png1397215428.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/basecomponent.php">
@@ -428,7 +448,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controller/indexController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="27" selection-start="1075" selection-end="1075" vertical-scroll-proportion="0.74914867" vertical-offset="0" max-vertical-offset="881" />
+        <state line="44" column="27" selection-start="1075" selection-end="1075" vertical-scroll-proportion="0.74914867" vertical-offset="0" max-vertical-offset="881">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/autoload.php">
@@ -499,13 +521,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="79" selection-start="344" selection-end="344" vertical-scroll-proportion="0.2553916" vertical-offset="0" max-vertical-offset="881">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/component/cms/entitymanager.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="44" column="44" selection-start="1266" selection-end="1266" vertical-scroll-proportion="-27.5" vertical-offset="0" max-vertical-offset="810" />
@@ -516,25 +531,9 @@
         <state line="32" column="5" selection-start="451" selection-end="457" vertical-scroll-proportion="-16.875" vertical-offset="0" max-vertical-offset="1260" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bootstrap.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="0" selection-start="965" selection-end="965" vertical-scroll-proportion="0.44267878" vertical-offset="0" max-vertical-offset="881">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/autoloader/autoloader.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="27" column="9" selection-start="580" selection-end="580" vertical-scroll-proportion="0.23382519" vertical-offset="94" max-vertical-offset="975" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/StackTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="7" selection-end="7" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="705">
-          <folding>
-            <element signature="e#7#51#0" expanded="true" />
-          </folding>
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/baseentitymanager.php">
@@ -546,9 +545,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/abstractcomponentfactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="2" selection-start="292" selection-end="292" vertical-scroll-proportion="-10.625" vertical-offset="0" max-vertical-offset="345">
+          <folding>
+            <element signature="e#6#171#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/abstractentitymanager.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="3" selection-start="171" selection-end="171" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="3615">
+        <state line="33" column="5" selection-start="727" selection-end="727" vertical-scroll-proportion="0.5618615" vertical-offset="0" max-vertical-offset="3615">
           <folding>
             <element signature="e#6#171#0" expanded="true" />
             <element signature="e#198#211#0" expanded="true" />
@@ -556,11 +564,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/abstractcomponentfactory.php">
+    <entry file="file://$PROJECT_DIR$/test/StackTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="2" selection-start="292" selection-end="292" vertical-scroll-proportion="0.28944382" vertical-offset="0" max-vertical-offset="881">
+        <state line="10" column="4" selection-start="111" selection-end="236" vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="705">
           <folding>
-            <element signature="e#6#171#0" expanded="true" />
+            <element signature="e#7#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/router.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="42" selection-start="1085" selection-end="1085" vertical-scroll-proportion="-17.333334" vertical-offset="289" max-vertical-offset="1440">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="0" selection-start="225" selection-end="225" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="555">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="79" selection-start="1222" selection-end="1222" vertical-scroll-proportion="-25.0" vertical-offset="0" max-vertical-offset="690">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/RouterTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="23" selection-start="93" selection-end="93" vertical-scroll-proportion="0.15323496" vertical-offset="0" max-vertical-offset="881">
+          <folding>
+            <element signature="e#7#51#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -36,3 +36,13 @@ spl_autoload_register("\autoloader\MyAutoloader::modelLoad");
 $composerAutoloader = _SITE_PATH."vendor".DIRECTORY_SEPARATOR."autoload.php";
 
 require_once $composerAutoloader;
+
+
+
+/**
+ *
+ * Environment Settings
+ *
+ */
+
+define('APPLICATION_ENV', "development"); // Could be development or production

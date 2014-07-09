@@ -14,13 +14,6 @@
  */
 require_once "bootstrap.php";
 
-/**
- *
- * Environment Settings
- *
- */
-
-define('APPLICATION_ENV', "development"); // Could be development or production
 
 
 /**
@@ -40,6 +33,7 @@ $registry->template = new \application\template($registry);
 $registry->template->setViewPath($sitepath."/view/");
 $route = "";
 $route = @$_GET['rt'];
+echo $route;
 $registry->router->loadController($route, $sitepath."/controller/");
 
 //End

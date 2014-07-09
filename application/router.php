@@ -19,6 +19,7 @@ class router {
     private $path;
     private $controller;
     private $action;
+    public $clClass;
 
 
     public function __construct($registry)
@@ -51,12 +52,12 @@ class router {
         $controllerFile = $this->getControllerReady($route);
 
         if(!is_readable($controllerFile)){
-         $this->controller = "pagenotfoundController";
+         $this->controller = "pagenotfound";
         }
 
         $controllerClass = '\\controller\\'.$this->controller."Controller";
         $controllerClass = new $controllerClass($this->registry);
-
+        $this->clClass = $controllerClass;
         if(!is_callable(array($controllerClass, $this->action)))
         {
             $controllerAction = "index";
