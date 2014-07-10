@@ -24,9 +24,9 @@ require_once "bootstrap.php";
  * Application Wide
  */
 
-$model = new \model\databaseutil();
+
 $registry = new \application\registry();
-$registry->model = $model;
+//$registry->model = \model\model::createDatabase(new \stdClass());
 $registry->router = new \application\router($registry);
 $registry->template = new \application\template($registry);
 $registry->template->setViewPath($sitepath."/view/");

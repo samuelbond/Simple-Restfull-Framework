@@ -11,24 +11,49 @@
 namespace model;
 
 
+use exceptions\databaseException;
+
 class databaseutil {
 
-    private static  $db = "expense";
-    private static  $user = "root";
-    private static  $pass = "";
-    private static  $host = "localhost";
+    private $db;
 
-   
-  
-    
-    public static function doConnection()
+
+    public function __construct(Db $db)
     {
-        $mysqli = new \mysqli(self::$host, self::$user, self::$pass, self::$db);
+        $this->db = $db;   //Db("mysqli", "mydb", "mydb_pass", "mydb_user", "localhost");
+    }
+    
+    public function mysqliConnection()
+    {
+        $mysqli = new \mysqli($this->db->getHost(), $this->db->getDbUsername(), $this->db->getDbPassword(), $this->db->getDbName());
+
         if($mysqli->connect_errno)
         {
-            return null;
+            $oldEx = $mysqli->connect_error;
+            $mysqli = new \mysqli("127.0.0.1", $this->db->getDbUsername(), $this->db->getDbPassword(), $this->db->getDbName(), 3306);
+
+            if($mysqli->connect_errno)
+            {
+                throw new databaseException("Failed to connect to database using host ".$this->db->getHost()." with message ".$oldEx."
+                                            Tried again using host 127.0.0.1 with message".$mysqli->connect_error);
+            }
+
         }
+
         return $mysqli;
+    }
+
+    public function pdoConnection()
+    {
+        $pdo = null;
+        try {
+            $pdo = new \PDO($this->db->getDatabaseType().":host=".$this->db->getHost().";dbname=".$this->db->getDbName(), $this->db->getDbUsername(), $this->db->getDbPassword());
+        } catch(\PDOException $ex)
+        {
+            throw new databaseException("Failed to connect to database using host".$this->db->getHost()." with message ".$ex->getMessage());
+        }
+
+        return $pdo;
     }
 
 

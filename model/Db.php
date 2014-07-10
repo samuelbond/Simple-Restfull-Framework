@@ -16,6 +16,7 @@ class Db {
     private $dbPassword;
     private $dbDriver;
     private $host;
+    private $databaseType;
 
     function __construct($dbDriver, $dbName, $dbPassword, $dbUsername, $host)
     {
@@ -105,6 +106,22 @@ class Db {
     public function getHost()
     {
         return $this->host;
+    }
+
+    /**
+     * @param mixed $databaseType
+     */
+    public function setDatabaseType($databaseType)
+    {
+        $this->databaseType = $databaseType;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDatabaseType()
+    {
+        return $this->databaseType;
     }
 
 

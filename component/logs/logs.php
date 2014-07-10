@@ -1,9 +1,11 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: s.amaziro
- * Date: 24/03/14
- * Time: 16:45
+ *
+ * Simple MVC Framework aka Baseframework
+ * @version 2.0
+ *
+ * Created By Samuel Izuchi Amaziro
+ * Copyright 2014 Plati Tech Limited, All Rights Reserved
  */
 
 namespace component\logs;
@@ -16,10 +18,9 @@ class logs extends basecomponent{
     private $message;
     private $type;
 
-    public function __construct($message = null, $type=null)
+    public function __construct()
     {
-        $this->message = $message;
-        $this->type = $type;
+        $this->init();
     }
 
     public function init()
@@ -39,8 +40,10 @@ class logs extends basecomponent{
         return "logs";
     }
 
-    public function doLogging()
+    public function doLogging($msg)
     {
+        $this->message = $msg;
+
         if(strtoupper(substr(PHP_OS, 0, 3)) === 'WIN')
         {
             error_log($this->message."\r\n", 3, _SITE_PATH.'log/'.$this->type);
@@ -50,22 +53,6 @@ class logs extends basecomponent{
             error_log($this->message."\n", 3, _SITE_PATH.'log/'.$this->type);
         }
 
-    }
-
-    /**
-     * @param mixed $message
-     */
-    public function setMessage($message)
-    {
-        $this->message = $message;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getMessage()
-    {
-        return $this->message;
     }
 
     /**

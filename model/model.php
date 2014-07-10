@@ -11,9 +11,69 @@
 namespace model;
 
 
+use component\logs\logs;
+
 class model {
 
-    private $tablename;
+    private static $databaseInstance = null;
 
+
+    private function __construct(){
+
+    }
+
+    public static function createDatabase(Db $dbObject, $new = null)
+    {
+        $conn = null;
+
+        if(!$new)
+        {
+            if(!self::$databaseInstance)
+            {
+                try{
+                    if($dbObject->getDbDriver() == "mysqli")
+                    {
+                        self::$databaseInstance = (new databaseutil($dbObject))->mysqliConnection();
+                        return self::$databaseInstance;
+                    }
+                    else
+                    {
+                         self::$databaseInstance = (new databaseutil($dbObject))->pdoConnection();
+                         return self::$databaseInstance;
+                    }
+                }catch (\Exception $ex)
+                {
+                    (new logs())->doLogging($ex->getMessage());
+                    return null;
+                 }
+            }
+        }
+        else
+        {
+            try{
+                if($dbObject->getDbDriver() == "mysqli")
+                {
+                    self::$databaseInstance = (new databaseutil($dbObject))->mysqliConnection();
+                    return self::$databaseInstance;
+                }
+                else
+                {
+                    self::$databaseInstance = (new databaseutil($dbObject))->pdoConnection();
+                    return self::$databaseInstance;
+                }
+            }catch (\Exception $ex)
+            {
+                (new logs())->doLogging($ex->getMessage());
+                return null;
+            }
+        }
+
+    }
+
+
+    private function __clone()
+    {
+
+    }
 
 }

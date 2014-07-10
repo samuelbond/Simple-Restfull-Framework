@@ -19,7 +19,7 @@ use Doctrine\ORM\Configuration;
 class abstractentitymanager {
 
 
-    private   $dbName      = "cms_db";
+    private   $dbName      = "mydb";
     private   $dbUser      = "root";
     private   $dbDriver    = "pdo_mysql";
     private   $dbPassword  = "root";
@@ -33,11 +33,6 @@ class abstractentitymanager {
     public  function __construct()
     {
 
-    }
-
-    public function reconfigure(array $entityAndProxyInfo, Db $db)
-    {
-        // TODO: Implement reconfigure() method.
     }
 
     public function createEntityManager()
@@ -54,7 +49,7 @@ class abstractentitymanager {
         // Proxy Configuration
         $config->setProxyDir($this->getProxyPath());
         $config->setProxyNamespace($this->getProxyNameSpace());
-        $config->setAutoGenerateProxyClasses((APPLICATION_ENV == "development"));
+        $config->setAutoGenerateProxyClasses(!(APPLICATION_ENV == "development"));
 
         // Mapping Configuration
         //$driverImpl = new Doctrine\ORM\Mapping\Driver\XmlDriver(__DIR__."/config/mappings/xml");
@@ -71,10 +66,16 @@ class abstractentitymanager {
         $config->setMetadataCacheImpl($cache);
         $config->setQueryCacheImpl($cache);
 
-
         // obtaining the entity manager
         $evm = new \Doctrine\Common\EventManager();
         $entityManager = \Doctrine\ORM\EntityManager::create($this->getDbParam(), $config, $evm);
+
+        // For generating entities From database
+        //$entityManager->getConfiguration()->setMetadataDriverImpl(new \Doctrine\ORM\Mapping\Driver\DatabaseDriver(
+        //   $entityManager->getConnection()->getSchemaManager()
+       // ));
+        //$cmf = new \Doctrine\ORM\Tools\DisconnectedClassMetadataFactory();
+       // $cmf->setEntityManager($entityManager);
 
         return $entityManager;
     }
@@ -101,7 +102,7 @@ class abstractentitymanager {
             return $this->entityPath;
         }
 
-        return array(_SITE_PATH."model".DIRECTORY_SEPARATOR."cms");
+        return array(_SITE_PATH."model".DIRECTORY_SEPARATOR."usermanagement");
     }
 
     public function getProxyPath()
@@ -111,7 +112,7 @@ class abstractentitymanager {
             return $this->proxyPath;
         }
 
-        return array(_SITE_PATH."model".DIRECTORY_SEPARATOR."cms".DIRECTORY_SEPARATOR."proxy");
+        return array(_SITE_PATH."model".DIRECTORY_SEPARATOR."usermanagement".DIRECTORY_SEPARATOR."proxy");
     }
 
 
@@ -122,7 +123,7 @@ class abstractentitymanager {
             return $this->proxyNamespace;
         }
 
-        return 'model\cms\proxy';
+        return 'model\usermanagement\proxy';
     }
 
     /**
