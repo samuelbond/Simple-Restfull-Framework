@@ -6,7 +6,7 @@
  * Time: 17:58
  */
 
-namespace cms;
+namespace component\cms;
 
 
 use application\abstractentitymanager;

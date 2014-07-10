@@ -12,9 +12,8 @@ namespace controller;
 
 
 use application\basecontroller;
-use cms\cms;
-use expense\expense;
-use usercomponent\usercomponent;
+use component\cms\cms;
+
 
 class indexController extends basecontroller{
 

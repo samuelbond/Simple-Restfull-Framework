@@ -6,7 +6,7 @@
  * Time: 13:53
  */
 
-namespace translator;
+namespace component\translator;
 
 
 class translation {

@@ -15,7 +15,6 @@
 require_once "bootstrap.php";
 
 
-
 /**
  *
  * Registry Settings

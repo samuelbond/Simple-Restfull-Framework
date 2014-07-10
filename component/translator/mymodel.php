@@ -6,7 +6,7 @@
  * Time: 13:48
  */
 
-namespace translator;
+namespace component\translator;
 
 use model\databaseutil;
 include_once "translation.php";

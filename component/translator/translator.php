@@ -6,7 +6,7 @@
  * Time: 13:35
  */
 
-namespace translator;
+namespace component\translator;
 
 
 use application\basecomponent;

@@ -6,7 +6,7 @@
  * Time: 16:45
  */
 
-namespace logs;
+namespace component\logs;
 
 
 use application\basecomponent;

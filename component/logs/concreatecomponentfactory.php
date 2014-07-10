@@ -6,7 +6,7 @@
  * Time: 17:48
  */
 
-namespace logs;
+namespace component\logs;
 
 
 use application\abstractcomponentfactory;
