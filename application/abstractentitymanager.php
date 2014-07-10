@@ -49,7 +49,7 @@ class abstractentitymanager {
         // Proxy Configuration
         $config->setProxyDir($this->getProxyPath());
         $config->setProxyNamespace($this->getProxyNameSpace());
-        $config->setAutoGenerateProxyClasses(!(APPLICATION_ENV == "development"));
+        $config->setAutoGenerateProxyClasses((APPLICATION_ENV == "development"));
 
         // Mapping Configuration
         //$driverImpl = new Doctrine\ORM\Mapping\Driver\XmlDriver(__DIR__."/config/mappings/xml");
