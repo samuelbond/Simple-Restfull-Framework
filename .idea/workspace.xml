@@ -28,100 +28,7 @@
     <favorites_list name="cms" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="Cms.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/component/cms/Cms.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="7" selection-start="194" selection-end="194" vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="1260">
-              <folding>
-                <element signature="e#115#153#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EntityManager.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/component/cms/EntityManager.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="11" selection-start="215" selection-end="215" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="705">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Logs.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/component/logs/Logs.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="9" selection-start="242" selection-end="242" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="1110">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LogsFactory.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/component/logs/LogsFactory.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="21" selection-start="340" selection-end="340" vertical-scroll-proportion="-9.375" vertical-offset="0" max-vertical-offset="360">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MyComponentFactory.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/component/mycomponent/MyComponentFactory.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="33" selection-start="303" selection-end="303" vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="330">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserManagement.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/component/usermanagement/UserManagement.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="13" selection-start="255" selection-end="255" vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="1080">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserManagementModelFacade.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/component/usermanagement/UserManagementModelFacade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="27" selection-start="437" selection-end="437" vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="1530">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoginManager.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/component/usermanagement/LoginManager.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="10" selection-start="136" selection-end="136" vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="480">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EntityManager.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/component/usermanagement/EntityManager.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="29" selection-start="514" selection-end="514" vertical-scroll-proportion="-9.375" vertical-offset="0" max-vertical-offset="600">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="onlyview.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/view/onlyview.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="4" selection-start="87" selection-end="87" vertical-scroll-proportion="0.10477299" vertical-offset="0" max-vertical-offset="859">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -131,8 +38,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/model/usermanagement/proxy/__CG__Users.php" />
-        <option value="$PROJECT_DIR$/component/cms/cms.php" />
         <option value="$PROJECT_DIR$/application/abstractentitymanager.php" />
         <option value="$PROJECT_DIR$/component/usermanagement/entitymanager.php" />
         <option value="$PROJECT_DIR$/model/usermanagement/Status.php" />
@@ -182,6 +87,8 @@
         <option value="$PROJECT_DIR$/component/usermanagement/UserManagementModelFacade.php" />
         <option value="$PROJECT_DIR$/component/usermanagement/LoginManager.php" />
         <option value="$PROJECT_DIR$/component/usermanagement/EntityManager.php" />
+        <option value="$PROJECT_DIR$/view/myview.php" />
+        <option value="$PROJECT_DIR$/view/myview.html" />
       </list>
     </option>
   </component>
@@ -242,20 +149,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -269,6 +162,7 @@
     <property name="options.searchVisible" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="FullScreen" value="false" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -308,11 +202,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1615" height="1026" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14427245" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14427245" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -598,14 +492,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/component/usermanagement/EntityManager.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="29" selection-start="514" selection-end="514" vertical-scroll-proportion="-9.375" vertical-offset="0" max-vertical-offset="600">
+        <state line="24" column="29" selection-start="514" selection-end="514" vertical-scroll-proportion="0.2553916" vertical-offset="0" max-vertical-offset="881">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/onlyview.php">
+    <entry file="file://$PROJECT_DIR$/view/myview.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="4" selection-start="87" selection-end="87" vertical-scroll-proportion="0.10477299" vertical-offset="0" max-vertical-offset="859">
+        <state line="6" column="0" selection-start="65" selection-end="65" vertical-scroll-proportion="0.10215664" vertical-offset="0" max-vertical-offset="881">
           <folding />
         </state>
       </provider>
