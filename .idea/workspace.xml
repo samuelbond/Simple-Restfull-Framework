@@ -29,15 +29,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MyComponent.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/component/mycomponent/MyComponent.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="29" selection-start="346" selection-end="346" vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="465">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Cms.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/component/cms/Cms.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -112,10 +103,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EntityManager.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="EntityManager.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/component/usermanagement/EntityManager.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="29" selection-start="514" selection-end="514" vertical-scroll-proportion="0.2619325" vertical-offset="0" max-vertical-offset="859">
+            <state line="24" column="29" selection-start="514" selection-end="514" vertical-scroll-proportion="-9.375" vertical-offset="0" max-vertical-offset="600">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="onlyview.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/view/onlyview.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="4" selection-start="87" selection-end="87" vertical-scroll-proportion="0.10477299" vertical-offset="0" max-vertical-offset="859">
               <folding />
             </state>
           </provider>
@@ -239,6 +239,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="cms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -584,7 +598,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/component/usermanagement/EntityManager.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="29" selection-start="514" selection-end="514" vertical-scroll-proportion="0.2619325" vertical-offset="0" max-vertical-offset="859">
+        <state line="24" column="29" selection-start="514" selection-end="514" vertical-scroll-proportion="-9.375" vertical-offset="0" max-vertical-offset="600">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/onlyview.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="4" selection-start="87" selection-end="87" vertical-scroll-proportion="0.10477299" vertical-offset="0" max-vertical-offset="859">
           <folding />
         </state>
       </provider>
