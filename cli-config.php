@@ -10,7 +10,7 @@
 
 
 require_once "bootstrap.php";
-$entity = new \application\abstractentitymanager();
+$entity = new \application\AbstractEntityManager();
 
 $entityManager = $entity->createEntityManager();
 

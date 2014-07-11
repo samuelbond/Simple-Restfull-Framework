@@ -10,7 +10,7 @@
 
 namespace autoloader;
 
-class MyAutoloader
+class Autoloader
 {
 
     public static function load($className)

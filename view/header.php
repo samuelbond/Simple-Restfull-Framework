@@ -1,81 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-    <!-- start: Meta -->
     <meta charset="utf-8">
-    <title><?php echo ((isset($headTitle)) ? $headTitle : "Game Client"); ?></title>
-    <meta name="description" content="Optimus Dashboard Bootstrap Admin Template.">
-    <meta name="author" content="Łukasz Holeczek">
-    <!-- end: Meta -->
-
-    <!-- start: Mobile Specific -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- end: Mobile Specific -->
-
-    <!-- start: CSS -->
-    <link id="bootstrap-style" href="view/css/bootstrap.css" rel="stylesheet">
+    <title>User Management</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link href="view/css/bootstrap.min.css" rel="stylesheet">
     <link href="view/css/bootstrap-responsive.min.css" rel="stylesheet">
-    <link id="base-style" href="view/css/style.css" rel="stylesheet">
-    <link id="base-style-responsive" href="view/css/style-responsive.css" rel="stylesheet">
-    <!-- end: CSS -->
-
-    <!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600"
+          rel="stylesheet">
+    <link href="view/css/font-awesome.css" rel="stylesheet">
+    <link href="view/css/style.css" rel="stylesheet">
+    <link href="view/css/pages/dashboard.css" rel="stylesheet">
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-
-    <!-- start: Favicon -->
-    <link rel="shortcut icon" href="img/favicon.ico">
-    <!-- end: Favicon -->
-
 </head>
-
 <body>
-<!-- start: Header -->
-<div class="navbar">
+<div class="navbar navbar-fixed-top">
     <div class="navbar-inner">
-        <div class="container-fluid">
-            <a class="btn btn-navbar" data-toggle="collapse" data-target=".top-nav.nav-collapse,.sidebar-nav.nav-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </a>
-            <a class="brand" href="index"> <span><?php echo ((isset($headTitle)) ? $headTitle : "Game Client"); ?></span></a>
-
-            <!-- start: Header Menu -->
-            <div class="btn-group pull-right" >
-                <!--
-                <a class="btn" href="#">
-                    <i class="icon-warning-sign"></i><span class="hidden-phone hidden-tablet"> notifications</span> <span class="label label-important hidden-phone">2</span> <span class="label label-success hidden-phone">11</span>
-                </a>
-                <a class="btn" href="#">
-                    <i class="icon-tasks"></i><span class="hidden-phone hidden-tablet"> tasks</span> <span class="label label-warning hidden-phone">17</span>
-                </a>
-                <a class="btn" href="#">
-                    <i class="icon-envelope"></i><span class="hidden-phone hidden-tablet"> messages</span> <span class="label label-success hidden-phone">9</span>
-                </a>
-                -->
-                <a class="btn" href="settings">
-                    <i class="icon-wrench"></i><span class="hidden-phone hidden-tablet"> settings</span>
-                </a>
-
+        <div class="container"> <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span
+                    class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span> </a><a class="brand" href="index.html">User Management Console </a>
+            <div class="nav-collapse">
+                <ul class="nav pull-right">
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
+                                class="icon-cog"></i> Account <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="javascript:;">Settings</a></li>
+                            <li><a href="javascript:;">Help</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
+                                class="icon-user"></i> EGrappler.com <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="javascript:;">Profile</a></li>
+                            <li><a href="javascript:;">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="navbar-search pull-right">
+                    <input type="text" class="search-query" placeholder="Search">
+                </form>
             </div>
-            <!-- end: Header Menu -->
-
+            <!--/.nav-collapse -->
         </div>
+        <!-- /container -->
     </div>
+    <!-- /navbar-inner -->
 </div>
-<div id="under-header"></div>
-<!-- start: Header -->
-
-<div class="container-fluid">
-    <div class="row-fluid">
-
-
-<noscript>
-    <div class="alert alert-block span10">
-        <h4 class="alert-heading">Warning!</h4>
-        <p>You need to have <a href="http://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a> enabled to use this site.</p>
+<!-- /navbar -->
+<div class="subnavbar">
+    <div class="subnavbar-inner">
+        <div class="container">
+            <ul class="mainnav">
+                <li class="active"><a href="index"><i class="icon-dashboard"></i><span>Dashboard</span> </a> </li>
+                <li><a href=""><i class="icon-cog"></i><span>App Settings</span> </a> </li>
+                <li><a href=""><i class="icon-facetime-video"></i><span>App Tour</span> </a></li>
+                <li class="dropdown"><a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"> <i class="icon-long-arrow-down"></i><span>More Links</span> <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="icons.html">Icons</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="pricing.html">Pricing Plans</a></li>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="signup.html">Signup</a></li>
+                        <li><a href="error.html">404</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- /container -->
     </div>
-</noscript>
+    <!-- /subnavbar-inner -->
+</div>
+<!-- /subnavbar -->

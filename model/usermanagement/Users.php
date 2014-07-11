@@ -1,5 +1,5 @@
 <?php
-
+namespace model\usermanagement;
 
 /**
  * Users
@@ -42,7 +42,7 @@ class Users
     /**
      * @var \Status
      *
-     * @ManyToOne(targetEntity="Status")
+     * @ManyToOne(targetEntity="Status",cascade="persist")
      * @JoinColumns({
      *   @JoinColumn(name="status", referencedColumnName="status_id")
      * })
@@ -52,7 +52,7 @@ class Users
     /**
      * @var \Profiles
      *
-     * @ManyToOne(targetEntity="Profiles")
+     * @ManyToOne(targetEntity="Profiles",cascade="persist")
      * @JoinColumns({
      *   @JoinColumn(name="profile", referencedColumnName="profile_id")
      * })
@@ -62,7 +62,7 @@ class Users
     /**
      * @var \Privileges
      *
-     * @ManyToOne(targetEntity="Privileges")
+     * @ManyToOne(targetEntity="Privileges",cascade="persist")
      * @JoinColumns({
      *   @JoinColumn(name="privilege", referencedColumnName="id")
      * })
@@ -155,7 +155,7 @@ class Users
      * @param \Status $status
      * @return Users
      */
-    public function setStatus(\Status $status = null)
+    public function setStatus(Status $status = null)
     {
         $this->status = $status;
 
@@ -178,7 +178,7 @@ class Users
      * @param \Profiles $profile
      * @return Users
      */
-    public function setProfile(\Profiles $profile = null)
+    public function setProfile(Profiles $profile = null)
     {
         $this->profile = $profile;
 
@@ -201,7 +201,7 @@ class Users
      * @param \Privileges $privilege
      * @return Users
      */
-    public function setPrivilege(\Privileges $privilege = null)
+    public function setPrivilege(Privileges $privilege = null)
     {
         $this->privilege = $privilege;
 

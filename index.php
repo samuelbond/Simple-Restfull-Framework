@@ -25,14 +25,13 @@ require_once "bootstrap.php";
  */
 
 
-$registry = new \application\registry();
+$registry = new \application\Registry();
 //$registry->model = \model\model::createDatabase(new \stdClass());
-$registry->router = new \application\router($registry);
-$registry->template = new \application\template($registry);
+$registry->router = new \application\Router($registry);
+$registry->template = new \application\Template($registry);
 $registry->template->setViewPath($sitepath."/view/");
 $route = "";
 $route = @$_GET['rt'];
-echo $route;
 $registry->router->loadController($route, $sitepath."/controller/");
 
 //End

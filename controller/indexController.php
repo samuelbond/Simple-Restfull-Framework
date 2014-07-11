@@ -11,11 +11,11 @@
 namespace controller;
 
 
-use application\basecontroller;
-use component\cms\cms;
+use application\BaseController;
+use component\cms\Cms;
 
 
-class indexController extends basecontroller{
+class indexController extends BaseController{
 
     public function index()
     {
@@ -39,11 +39,35 @@ class indexController extends basecontroller{
         }
          */
 
-        echo("I am expense toString\n");
+      /*  echo("I am expense toString\n");
         echo $var = new cms();
-        $var->getNewFile();
+       // $var->getNewFile();
         echo "\nI am alive";
         $string = "clientsecret".date("Y").date("m").date("d").date("H")."cancel";
         echo md5($string);
+        echo("password\n");
+        $options = [
+            'cost'  => 11,
+            'salt'  => mcrypt_create_iv(22, MCRYPT_DEV_URANDOM)
+        ];
+        echo $pass1 = password_hash("samuel", PASSWORD_BCRYPT, $options);
+        $options = null;
+        $options = [
+            'cost'  => 11,
+            'salt'  => mcrypt_create_iv(22, MCRYPT_DEV_URANDOM)
+        ];
+        echo("\n New password\n");
+        echo $pass2 = password_hash("samuel", PASSWORD_BCRYPT, $options);
+
+        if(password_verify('samuel', $pass1))
+        {
+            echo "samuel is the password";
+        }
+        else
+        {
+            echo "samuel was not verified as password";
+        }*/
+
+        $this->registry->template->loadview("login");
     }
 }

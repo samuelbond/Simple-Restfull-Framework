@@ -1,5 +1,5 @@
 <?php
-
+namespace model\usermanagement;
 
 /**
  * Privileges

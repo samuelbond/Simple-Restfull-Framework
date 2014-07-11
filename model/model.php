@@ -11,7 +11,7 @@
 namespace model;
 
 
-use component\logs\logs;
+use component\logs\Logs;
 
 class model {
 
@@ -43,7 +43,7 @@ class model {
                     }
                 }catch (\Exception $ex)
                 {
-                    (new logs())->doLogging($ex->getMessage());
+                    (new Logs())->doLogging($ex->getMessage());
                     return null;
                  }
             }
@@ -63,7 +63,7 @@ class model {
                 }
             }catch (\Exception $ex)
             {
-                (new logs())->doLogging($ex->getMessage());
+                (new Logs())->doLogging($ex->getMessage());
                 return null;
             }
         }

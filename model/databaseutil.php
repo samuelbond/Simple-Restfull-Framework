@@ -11,7 +11,7 @@
 namespace model;
 
 
-use exceptions\databaseException;
+use exceptions\DatabaseException;
 
 class databaseutil {
 
@@ -34,7 +34,7 @@ class databaseutil {
 
             if($mysqli->connect_errno)
             {
-                throw new databaseException("Failed to connect to database using host ".$this->db->getHost()." with message ".$oldEx."
+                throw new DatabaseException("Failed to connect to database using host ".$this->db->getHost()." with message ".$oldEx."
                                             Tried again using host 127.0.0.1 with message".$mysqli->connect_error);
             }
 
@@ -50,7 +50,7 @@ class databaseutil {
             $pdo = new \PDO($this->db->getDatabaseType().":host=".$this->db->getHost().";dbname=".$this->db->getDbName(), $this->db->getDbUsername(), $this->db->getDbPassword());
         } catch(\PDOException $ex)
         {
-            throw new databaseException("Failed to connect to database using host".$this->db->getHost()." with message ".$ex->getMessage());
+            throw new DatabaseException("Failed to connect to database using host".$this->db->getHost()." with message ".$ex->getMessage());
         }
 
         return $pdo;
