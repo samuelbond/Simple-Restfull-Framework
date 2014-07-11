@@ -22,7 +22,7 @@ class EntityManager implements BaseEntityManager{
     public function reconfigure()
     {
         $em = new AbstractEntityManager();
-
+        //Configure Namespace
         $em->setProxyNamespace("model\usermanagement\proxy");
         $em->setProxyPath(_SITE_PATH."model".DIRECTORY_SEPARATOR."usermanagement".DIRECTORY_SEPARATOR."proxy");
         $em->setEntityPath(_SITE_PATH."model".DIRECTORY_SEPARATOR."usermanagement");

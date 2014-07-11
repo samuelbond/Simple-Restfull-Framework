@@ -115,7 +115,7 @@
       <file leaf-file-name="EntityManager.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/component/usermanagement/EntityManager.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="42" selection-start="484" selection-end="484" vertical-scroll-proportion="0.24447031" vertical-offset="0" max-vertical-offset="859">
+            <state line="24" column="29" selection-start="514" selection-end="514" vertical-scroll-proportion="0.2619325" vertical-offset="0" max-vertical-offset="859">
               <folding />
             </state>
           </provider>
@@ -348,19 +348,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/OldView/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="39" selection-start="0" selection-end="712" vertical-scroll-proportion="0.2724177" vertical-offset="0" max-vertical-offset="881" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="0" selection-start="59" selection-end="59" vertical-scroll-proportion="0.050962627" vertical-offset="0" max-vertical-offset="883" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/OldView/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1305" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
@@ -380,70 +370,6 @@
     <entry file="file://$USER_HOME$/Downloads/Bootstrap-Clean-Dashboard-Theme-master/demo/form.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="40" selection-start="335" selection-end="335" vertical-scroll-proportion="0.13620885" vertical-offset="0" max-vertical-offset="4635" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/css/base-admin-responsive.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="905" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/css/bootstrap-responsive.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="892" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1262" column="16" selection-start="21918" selection-end="21918" vertical-scroll-proportion="0.9005525" vertical-offset="18115" max-vertical-offset="19380">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="0" selection-start="2284" selection-end="21766" vertical-scroll-proportion="-8.125" vertical-offset="570" max-vertical-offset="7980">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="944" selection-end="944" vertical-scroll-proportion="-16.25" vertical-offset="0" max-vertical-offset="525" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/adduser.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="124" column="0" selection-start="4277" selection-end="4307" vertical-scroll-proportion="0.89784336" vertical-offset="1069" max-vertical-offset="1950" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/loginHeader.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="40" selection-start="1190" selection-end="1190" vertical-scroll-proportion="0.6111758" vertical-offset="0" max-vertical-offset="859" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/loginFooter.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="18" selection-start="116" selection-end="116" vertical-scroll-proportion="0.052386496" vertical-offset="0" max-vertical-offset="859" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/OldView/user.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="1220" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="930" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="0" selection-start="1332" selection-end="1332" vertical-scroll-proportion="0.800227" vertical-offset="0" max-vertical-offset="881" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/user.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="36" selection-start="2591" selection-end="2591" vertical-scroll-proportion="0.77764976" vertical-offset="120" max-vertical-offset="1245" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="49" selection-start="2751" selection-end="2751" vertical-scroll-proportion="0.9677419" vertical-offset="0" max-vertical-offset="1215" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/model/cms/FileRepository.php">
@@ -658,7 +584,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/component/usermanagement/EntityManager.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="42" selection-start="484" selection-end="484" vertical-scroll-proportion="0.24447031" vertical-offset="0" max-vertical-offset="859">
+        <state line="24" column="29" selection-start="514" selection-end="514" vertical-scroll-proportion="0.2619325" vertical-offset="0" max-vertical-offset="859">
           <folding />
         </state>
       </provider>
