@@ -1,0 +1,7 @@
+{
+    "name": "plati-tech/simple-mvc",
+    "description": "A Simple MVC framework with component style",
+    "require": {
+        "php": ">=5.3.0"
+    }
+}
