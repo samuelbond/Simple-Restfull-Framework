@@ -1,2 +1,2 @@
-Simple-MV-Framework
+Simple-MVC-Framework
 ===================
