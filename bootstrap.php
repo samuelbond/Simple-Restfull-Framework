@@ -15,8 +15,8 @@
  */
 
 $sitepath = realpath(dirname(__FILE__));
-
-define('_SITE_PATH', $sitepath.DIRECTORY_SEPARATOR);
+$sitepath = $sitepath.DIRECTORY_SEPARATOR;
+define('_SITE_PATH', $sitepath);
 
 /**
  * Site Bootstrapping

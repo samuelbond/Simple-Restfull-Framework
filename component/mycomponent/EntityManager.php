@@ -1,19 +1,16 @@
 <?php
 /**
- *
- * Simple MVC Framework aka Baseframework
- * @version 2.0
- *
- * Created By Samuel Izuchi Amaziro
- * Copyright 2014 Plati Tech Limited, All Rights Reserved
+ * Created by PhpStorm.
+ * User: samuel
+ * Date: 15/07/14
+ * Time: 14:11
  */
 
-namespace component\usermanagement;
+namespace component\mycomponent;
 
 
 use application\AbstractEntityManager;
 use application\BaseEntityManager;
-use model\Db;
 
 class EntityManager implements BaseEntityManager{
 
@@ -23,9 +20,9 @@ class EntityManager implements BaseEntityManager{
     {
         $em = new AbstractEntityManager();
         //Configure Namespace
-        $em->setProxyNamespace("model\usermanagement\proxy");
-        $em->setProxyPath(_SITE_PATH."model".DIRECTORY_SEPARATOR."usermanagement".DIRECTORY_SEPARATOR."proxy");
-        $em->setEntityPath(_SITE_PATH."model".DIRECTORY_SEPARATOR."usermanagement");
+        $em->setProxyNamespace("model\mycomponent\proxy");
+        $em->setProxyPath(_SITE_PATH."model".DIRECTORY_SEPARATOR."mycomponentt".DIRECTORY_SEPARATOR."proxy");
+        $em->setEntityPath(_SITE_PATH."model".DIRECTORY_SEPARATOR."mycomponent");
         return $em;
     }
 
@@ -39,6 +36,4 @@ class EntityManager implements BaseEntityManager{
 
         return self::$entityManagerInstance;
     }
-
-
 } 
