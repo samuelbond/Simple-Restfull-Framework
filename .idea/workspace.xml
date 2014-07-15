@@ -49,7 +49,6 @@
         <option value="$PROJECT_DIR$/controller/newuserController.php" />
         <option value="$PROJECT_DIR$/view/user.php" />
         <option value="$PROJECT_DIR$/view/adduser.php" />
-        <option value="$PROJECT_DIR$/controller/indexController.php" />
         <option value="$PROJECT_DIR$/view/loginFooter.php" />
         <option value="$PROJECT_DIR$/view/login.php" />
         <option value="$PROJECT_DIR$/view/loginHeader.php" />
@@ -86,6 +85,7 @@
         <option value="$PROJECT_DIR$/bootstrap.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/component/mycomponent/EntityManager.php" />
+        <option value="$PROJECT_DIR$/controller/indexController.php" />
       </list>
     </option>
   </component>
@@ -143,6 +143,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="cms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -270,11 +284,6 @@
         <state line="8" column="40" selection-start="335" selection-end="335" vertical-scroll-proportion="0.13620885" vertical-offset="0" max-vertical-offset="4635" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controller/indexController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="50" selection-start="1910" selection-end="1910" vertical-scroll-proportion="0.86379117" vertical-offset="169" max-vertical-offset="1050" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controller/newuserController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="32" selection-start="261" selection-end="261" vertical-scroll-proportion="-8.125" vertical-offset="0" max-vertical-offset="420" />
@@ -308,7 +317,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/BaseController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="19" selection-start="217" selection-end="217" vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="390" />
+        <state line="13" column="19" selection-start="217" selection-end="217" vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="390">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/BaseEntityManager.php">
@@ -419,6 +430,13 @@
     <entry file="file://$PROJECT_DIR$/config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="25" selection-start="273" selection-end="273" vertical-scroll-proportion="0.2383655" vertical-offset="0" max-vertical-offset="881">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/indexController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="50" selection-start="385" selection-end="385" vertical-scroll-proportion="0.22133939" vertical-offset="0" max-vertical-offset="881">
           <folding />
         </state>
       </provider>
