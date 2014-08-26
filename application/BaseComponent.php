@@ -14,15 +14,42 @@ namespace application;
 Abstract class BaseComponent {
 
     protected  $registry;
+    protected  $currentVersion = "1.0";
 
     public function __construct($registry)
     {
         $this->registry = $registry;
     }
 
-    abstract public function init();
+    /**
+     * Loads a component based on current version
+     * @return mixed
+     */
+    abstract public function loadComponent();
 
-    abstract public function __toString();
+    /**
+     * Gets the current version of the component
+     * @return string
+     */
+    public function getCurrentVersion()
+    {
+        return $this->currentVersion;
+    }
 
+    /**
+     * Returns an array of available versions for a component
+     * @return array
+     */
+    public function getAvailableVersions()
+    {
+        return array($this->getCurrentVersion());
+    }
 
+    public function setCurrentVersion($version)
+    {
+        if(in_array($version, $this->getAvailableVersions()))
+        {
+            $this->currentVersion = $version;
+        }
+    }
 }

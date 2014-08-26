@@ -12,20 +12,52 @@ namespace component\mycomponent;
 use application\BaseComponent;
 
 class MyComponent extends BaseComponent{
-    public function init()
+
+    public function __construct()
     {
-        // TODO: Implement init() method.
     }
 
-    public function __toString()
+    /**
+     * Loads a component based on current version
+     * @return $this
+     */
+    public function loadComponent()
     {
-        return "MyComponent";
+        return $this->myComponentSelectVersion($this->getCurrentVersion());
     }
 
-    function __construct()
+    /**
+     * Gets the current version of the component
+     * @return string
+     */
+    public function getCurrentVersion()
     {
-        // TODO: Implement __construct() method.
+        return $this->currentVersion;
     }
 
+    /**
+     * Returns an array of available versions for a component
+     * @return array
+     */
+    public function getAvailableVersions()
+    {
+        return array($this->getCurrentVersion());
+    }
+
+    /**
+     * Selects the given version of this component
+     *
+     * @param $version
+     * @return $this
+     */
+    private function myComponentSelectVersion($version)
+    {
+        switch($version)
+        {
+            case "1.0":
+            default:
+                return $this;
+        }
+    }
 
 } 
