@@ -10,11 +10,22 @@
 
 namespace application;
 
-
+/**
+ * Interface BaseEntityManager
+ * @package application
+ */
 interface BaseEntityManager {
 
+    /**
+     * Reconfigures the entity manager to a new entity, proxy directory and namespace
+     * @return void
+     */
     public function reconfigure();
 
+    /**
+     * Creates a new entity manager or returns an existing instance
+     * @return mixed
+     */
     public static function createEntityManager();
 
 } 
