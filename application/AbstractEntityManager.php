@@ -16,6 +16,10 @@ use Doctrine\ORM\Tools\Setup;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\Configuration;
 
+/**
+ * Class AbstractEntityManager
+ * @package application
+ */
 class AbstractEntityManager {
 
 
@@ -26,22 +30,22 @@ class AbstractEntityManager {
     private   $dbHost      = "localhost";
     private   $entityPath  = null;
     private   $proxyPath   = null;
-  //protected  $entityNamespace = null;
     private   $proxyNamespace  = null;
 
-
-    public  function __construct()
-    {
-
-    }
-
+    /**
+     * Creates the entity manager
+     * @return EntityManager
+     */
     public function createEntityManager()
     {
         return $this->newConfig();
     }
 
 
-
+    /**
+     * Configures and creates a new EntityManager
+     * @return EntityManager
+     */
     public function newConfig()
     {
         $config = new \Doctrine\ORM\Configuration();
@@ -81,6 +85,10 @@ class AbstractEntityManager {
     }
 
 
+    /**
+     * Gets the parameters of the database
+     * @return array
+     */
     public function getDbParam()
     {
 
@@ -95,9 +103,13 @@ class AbstractEntityManager {
         return $dbParams;
     }
 
+    /**
+     * Gets the path to entities
+     * @return array|null
+     */
     public function getEntityPath()
     {
-        if($this->entityPath)
+        if(!is_null($this->entityPath))
         {
             return $this->entityPath;
         }
@@ -105,9 +117,13 @@ class AbstractEntityManager {
         return array(_SITE_PATH."model".DIRECTORY_SEPARATOR."usermanagement");
     }
 
+    /**
+     * Gets the path to entity proxies
+     * @return array|null
+     */
     public function getProxyPath()
     {
-        if($this->proxyPath)
+        if(!is_null($this->proxyPath))
         {
             return $this->proxyPath;
         }
@@ -115,10 +131,13 @@ class AbstractEntityManager {
         return array(_SITE_PATH."model".DIRECTORY_SEPARATOR."usermanagement".DIRECTORY_SEPARATOR."proxy");
     }
 
-
+    /**
+     * Gets the namespace of entity proxies
+     * @return null|string
+     */
     public function getProxyNameSpace()
     {
-        if($this->proxyNamespace)
+        if(!is_null($this->proxyNamespace))
         {
             return $this->proxyNamespace;
         }
