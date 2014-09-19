@@ -10,12 +10,18 @@
 
 namespace application;
 
-
+/**
+ * Class BaseComponent
+ * @package application
+ */
 Abstract class BaseComponent {
 
     protected  $registry;
     protected  $currentVersion = "1.0";
 
+    /**
+     * @param $registry
+     */
     public function __construct($registry)
     {
         $this->registry = $registry;
@@ -45,6 +51,10 @@ Abstract class BaseComponent {
         return array($this->getCurrentVersion());
     }
 
+    /**
+     * Sets the version to use if called before loadComponent to the provided version if on the list of available versions
+     * @param $version
+     */
     public function setCurrentVersion($version)
     {
         if(in_array($version, $this->getAvailableVersions()))
