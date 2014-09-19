@@ -14,6 +14,10 @@ namespace application;
 use exceptions\InvalidPathException;
 use exceptions\TemplateException;
 
+/**
+ * Class Template
+ * @package application
+ */
 class Template {
 
     private $registry;
@@ -25,7 +29,11 @@ class Template {
         $this->registry = $registry;
     }
 
-
+    /**
+     * Sets the path to the view to be loaded
+     * @param $path
+     * @throws InvalidPathException
+     */
     public function setViewPath($path)
     {
         try
@@ -42,12 +50,23 @@ class Template {
         }
     }
 
-
+    /**
+     * Dynamic setter for variables
+     * @param $name
+     * @param $value
+     */
     public function __set($name, $value)
     {
         $this->variables[$name] = $value;
     }
 
+    /**
+     * Loads a given view e.g view(index) where index.php
+     * @param $viewname
+     * @param bool $useHeaderAndFooter
+     * @throws TemplateException
+     * @return bool
+     */
     public function loadView($viewname, $useHeaderAndFooter = false)
     {
         $viewfile = $this->path.$viewname.".php";
@@ -57,7 +76,6 @@ class Template {
             if(!file_exists($viewfile))
             {
                 throw new TemplateException("Template view not found!");
-                return false;
             }
 
             foreach($this->variables as $nameOfVariable => $valueOfVariable)
@@ -74,6 +92,7 @@ class Template {
         }catch (\Exception $ex)
         {
            echo $ex->getMessage();
+           return false;
         }
     }
 
