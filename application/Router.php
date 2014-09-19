@@ -13,6 +13,10 @@ namespace application;
 
 use exceptions\InvalidPathException;
 
+/**
+ * Class Router
+ * @package application
+ */
 class Router {
 
     private $registry;
@@ -21,12 +25,19 @@ class Router {
     private $action;
     public $clClass;
 
-
+    /**
+     * @param $registry
+     */
     public function __construct($registry)
     {
         $this->registry = $registry;
     }
 
+    /**
+     * Sets the path to the requested controller
+     * @param $path
+     * @throws \exceptions\InvalidPathException
+     */
     public function setControllerPath($path)
     {
 
@@ -38,6 +49,13 @@ class Router {
 
     }
 
+    /**
+     * Load the requested Controller
+     * @param $route
+     * @param $path
+     * @throws \Exception
+     * @return bool
+     */
     public function loadController($route, $path)
     {
         try
@@ -69,6 +87,11 @@ class Router {
         $controllerClass->$controllerAction();
     }
 
+    /**
+     * Prepares the action of the requested controller
+     * @param $route
+     * @return string
+     */
     public function getControllerReady($route)
     {
         if(!empty($route))
