@@ -10,9 +10,17 @@
 
 namespace autoloader;
 
+/**
+ * Class Autoloader
+ * @package autoloader
+ */
 class Autoloader
 {
 
+    /**
+     * Loads a given class
+     * @param $className
+     */
     public static function load($className)
     {
 
