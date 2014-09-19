@@ -10,16 +10,26 @@
 
 namespace application;
 
-
+/**
+ * Class BaseController
+ * @package application
+ */
 Abstract class BaseController {
 
     protected $registry;
 
+    /**
+     * @param $registry
+     */
     public function __construct($registry)
     {
         $this->registry = $registry;
     }
 
+    /**
+     * The default action for all controllers
+     * @return mixed
+     */
     abstract public function index();
 
 
