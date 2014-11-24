@@ -11,10 +11,8 @@
 namespace application;
 
 
-use model\Db;
-use Doctrine\ORM\Tools\Setup;
+use model\DatabaseConfiguration;
 use Doctrine\ORM\EntityManager;
-use Doctrine\ORM\Configuration;
 
 /**
  * Class AbstractEntityManager
@@ -23,11 +21,12 @@ use Doctrine\ORM\Configuration;
 class AbstractEntityManager {
 
 
-    private   $dbName      = "cms_db";
+    private   $dbName      = "my_database";
     private   $dbUser      = "root";
     private   $dbDriver    = "pdo_mysql";
-    private   $dbPassword  = "root";
+    private   $dbPassword  = "";
     private   $dbHost      = "localhost";
+    private   $dbPort      = 3307;
     private   $entityPath  = null;
     private   $proxyPath   = null;
     private   $proxyNamespace  = null;
@@ -38,6 +37,12 @@ class AbstractEntityManager {
      */
     public function createEntityManager()
     {
+        $databaseConfig = new DatabaseConfiguration();
+        $this->dbName  = $databaseConfig->getDbName();
+        $this->dbUser = $databaseConfig->getDbUsername();
+        $this->dbPassword = $databaseConfig->getDbPassword();
+        $this->dbHost = $databaseConfig->getHost();
+        $this->dbPort = $databaseConfig->getPort();
         return $this->newConfig();
     }
 
@@ -114,7 +119,7 @@ class AbstractEntityManager {
             return $this->entityPath;
         }
 
-        return array(_SITE_PATH."model".DIRECTORY_SEPARATOR."usermanagement");
+        return array(_SITE_PATH."model".DIRECTORY_SEPARATOR."entities");
     }
 
     /**
@@ -128,7 +133,7 @@ class AbstractEntityManager {
             return $this->proxyPath;
         }
 
-        return array(_SITE_PATH."model".DIRECTORY_SEPARATOR."usermanagement".DIRECTORY_SEPARATOR."proxy");
+        return array(_SITE_PATH."model".DIRECTORY_SEPARATOR."entities".DIRECTORY_SEPARATOR."proxy");
     }
 
     /**
@@ -142,7 +147,7 @@ class AbstractEntityManager {
             return $this->proxyNamespace;
         }
 
-        return 'model\usermanagement\proxy';
+        return 'model\entities\proxy';
     }
 
     /**

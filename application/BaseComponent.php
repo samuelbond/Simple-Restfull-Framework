@@ -22,7 +22,7 @@ Abstract class BaseComponent {
     /**
      * @param $registry
      */
-    public function __construct($registry)
+    public function __construct($registry = null)
     {
         $this->registry = $registry;
     }

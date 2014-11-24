@@ -6,7 +6,7 @@
  * Time: 14:11
  */
 
-namespace component\mycomponent;
+namespace component;
 
 
 use application\AbstractEntityManager;
@@ -14,15 +14,14 @@ use application\BaseEntityManager;
 
 class EntityManager implements BaseEntityManager{
 
+    /**
+     * @var null|\Doctrine\ORM\EntityManager
+     */
     private static $entityManagerInstance = null;
 
     public function reconfigure()
     {
         $em = new AbstractEntityManager();
-        //Configure Namespace
-        $em->setProxyNamespace("model\mycomponent\proxy");
-        $em->setProxyPath(_SITE_PATH."model".DIRECTORY_SEPARATOR."mycomponentt".DIRECTORY_SEPARATOR."proxy");
-        $em->setEntityPath(_SITE_PATH."model".DIRECTORY_SEPARATOR."mycomponent");
         return $em;
     }
 
@@ -35,5 +34,16 @@ class EntityManager implements BaseEntityManager{
         }
 
         return self::$entityManagerInstance;
+    }
+
+    public static function closeEntityManager()
+    {
+        $em = self::$entityManagerInstance;
+
+        if($em !== null)
+        {
+            $em->close();
+            self::$entityManagerInstance = null;
+        }
     }
 } 

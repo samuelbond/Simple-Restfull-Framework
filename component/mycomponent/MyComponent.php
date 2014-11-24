@@ -15,6 +15,7 @@ class MyComponent extends BaseComponent{
 
     public function __construct()
     {
+        parent::__construct();
     }
 
     /**
@@ -23,7 +24,7 @@ class MyComponent extends BaseComponent{
      */
     public function loadComponent()
     {
-        return $this->myComponentSelectVersion($this->getCurrentVersion());
+        return $this->selectVersion($this->getCurrentVersion());
     }
 
     /**
@@ -50,7 +51,7 @@ class MyComponent extends BaseComponent{
      * @param $version
      * @return $this
      */
-    private function myComponentSelectVersion($version)
+    private function selectVersion($version)
     {
         switch($version)
         {

@@ -9,22 +9,24 @@
 namespace model;
 
 
-class Db {
+class Database {
 
     private $dbName;
     private $dbUsername;
     private $dbPassword;
     private $dbDriver;
     private $host;
-    private $databaseType;
+    private $port;
+    private $databaseType = "mysql";
 
-    function __construct($dbDriver, $dbName, $dbPassword, $dbUsername, $host)
+    function __construct($dbDriver, $dbName, $dbPassword, $dbUsername, $host, $port = 3306)
     {
         $this->dbDriver = $dbDriver;
         $this->dbName = $dbName;
         $this->dbPassword = $dbPassword;
         $this->dbUsername = $dbUsername;
         $this->host = $host;
+        $this->port = $port;
     }
 
 
@@ -122,6 +124,22 @@ class Db {
     public function getDatabaseType()
     {
         return $this->databaseType;
+    }
+
+    /**
+     * @param mixed $port
+     */
+    public function setPort($port)
+    {
+        $this->port = $port;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPort()
+    {
+        return $this->port;
     }
 
 

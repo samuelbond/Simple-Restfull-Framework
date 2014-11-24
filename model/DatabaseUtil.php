@@ -13,12 +13,12 @@ namespace model;
 
 use exceptions\DatabaseException;
 
-class databaseutil {
+class DatabaseUtil {
 
     private $db;
 
 
-    public function __construct(Db $db)
+    public function __construct(Database $db)
     {
         $this->db = $db;   //Db("mysqli", "mydb", "mydb_pass", "mydb_user", "localhost");
     }
@@ -30,7 +30,7 @@ class databaseutil {
         if($mysqli->connect_errno)
         {
             $oldEx = $mysqli->connect_error;
-            $mysqli = new \mysqli("127.0.0.1", $this->db->getDbUsername(), $this->db->getDbPassword(), $this->db->getDbName(), 3306);
+            $mysqli = new \mysqli($this->db->getHost(), $this->db->getDbUsername(), $this->db->getDbPassword(), $this->db->getDbName(), $this->db->getPort());
 
             if($mysqli->connect_errno)
             {
@@ -47,7 +47,7 @@ class databaseutil {
     {
         $pdo = null;
         try {
-            $pdo = new \PDO($this->db->getDatabaseType().":host=".$this->db->getHost().";dbname=".$this->db->getDbName(), $this->db->getDbUsername(), $this->db->getDbPassword());
+            $pdo = new \PDO($this->db->getDatabaseType().":host=".$this->db->getHost().";port=".$this->db->getPort().";dbname=".$this->db->getDbName(), $this->db->getDbUsername(), $this->db->getDbPassword());
         } catch(\PDOException $ex)
         {
             throw new DatabaseException("Failed to connect to database using host".$this->db->getHost()." with message ".$ex->getMessage());
