@@ -8,7 +8,7 @@
 namespace test;
 
 use application\Router;
-use controller\indexController;
+use controller\indexServices;
 
 require_once dirname(basename(__DIR__)).DIRECTORY_SEPARATOR."bootstrap.php";
 
@@ -25,9 +25,9 @@ class RouterTest extends \PHPUnit_Framework_TestCase{
     public function testController()
     {
         $router = new Router(new \stdClass());
-        $router->loadController("index", _SITE_PATH."controller/");
+        $router->loadService("index", _SITE_PATH."services/");
 
-        $this->assertTrue($router->clClass instanceof indexController, "Failed to create requested controller");
+        $this->assertTrue($router->clClass instanceof indexServices, "Failed to create requested services");
     }
 
 } 

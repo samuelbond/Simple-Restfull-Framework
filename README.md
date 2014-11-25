@@ -1,2 +1,2 @@
-Simple-MVC-Framework
+Simple Restful Framework
 ===================

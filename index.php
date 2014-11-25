@@ -27,10 +27,20 @@ require_once "bootstrap.php";
 
 $registry = new \application\Registry();
 $registry->router = new \application\Router($registry);
-$registry->template = new \application\Template($registry);
-$registry->template->setViewPath(_SITE_PATH."view".DIRECTORY_SEPARATOR);
 $route = "";
 $route = @$_GET['rt'];
-$registry->router->loadController($route, _SITE_PATH."controller".DIRECTORY_SEPARATOR);
+$response = null;
+try
+{
+    $response = $registry->router->loadService($route, _SITE_PATH."services".DIRECTORY_SEPARATOR);
+}
+catch (\Exception $ex)
+{
+    echo $ex->getMessage();
+    return;
+}
+
+$out = new \response\ResponseWrapper($settings['response_type'], $response);
+echo $out->getOutput();
 
 //End

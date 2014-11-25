@@ -11,12 +11,18 @@
 namespace application;
 
 /**
- * Class BaseController
+ * Class BaseService
  * @package application
  */
-Abstract class BaseController {
+Abstract class BaseService {
 
     protected $registry;
+    /**
+     * An array containing the name of each service in a class
+     * and their HTTP request type as a key value pair
+     * @var array
+     */
+    protected $types;
 
     /**
      * @param $registry
@@ -27,7 +33,15 @@ Abstract class BaseController {
     }
 
     /**
-     * The default action for all controllers
+     * This method returns the HTTP type of a given service
+     * @param $serviceName
+     * @return HTTP Request Type
+     */
+    abstract public function getType($serviceName);
+
+
+    /**
+     * The default action for all services
      * @return mixed
      */
     abstract public function index();

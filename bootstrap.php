@@ -30,6 +30,10 @@ require_once $bootstrap;
 
 spl_autoload_register("\autoloader\Autoloader::load");
 
+$configuration = _SITE_PATH."configuration.php";
+
+require_once $configuration;
+
 //Composer autoloader
 $composerAutoloader = _SITE_PATH."vendor".DIRECTORY_SEPARATOR."autoload.php";
 

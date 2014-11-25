@@ -11,6 +11,7 @@
 namespace application;
 
 
+use exceptions\ApplicationException;
 use exceptions\InvalidPathException;
 
 /**
@@ -21,7 +22,7 @@ class Router {
 
     private $registry;
     private $path;
-    private $controller;
+    private $service;
     private $action;
     public $clClass;
 
@@ -34,11 +35,11 @@ class Router {
     }
 
     /**
-     * Sets the path to the requested controller
+     * Sets the path to the requested services
      * @param $path
      * @throws \exceptions\InvalidPathException
      */
-    public function setControllerPath($path)
+    public function setServicePath($path)
     {
 
         if(!(is_dir($path)))
@@ -50,63 +51,63 @@ class Router {
     }
 
     /**
-     * Load the requested Controller
+     * Load the requested Service
      * @param $route
      * @param $path
      * @throws \Exception
      * @return bool
      */
-    public function loadController($route, $path)
+    public function loadService($route, $path)
     {
-        try
-        {
-            $this->setControllerPath($path);
-        }catch (\Exception $ex)
-        {
-            echo $ex->getMessage();
-            return false;
+
+        $this->setServicePath($path);
+
+        $serviceFile = $this->getServiceReady($route);
+
+        if(!is_readable($serviceFile)){
+         $this->service = "pagenotfound";
         }
 
-        $controllerFile = $this->getControllerReady($route);
-
-        if(!is_readable($controllerFile)){
-         $this->controller = "pagenotfound";
-        }
-
-        $controllerClass = '\\controller\\'.$this->controller."Controller";
-        $controllerClass = new $controllerClass($this->registry);
-        $this->clClass = $controllerClass;
-        if(!is_callable(array($controllerClass, $this->action)))
+        $serviceClass = '\\services\\'.$this->service."Service";
+        $serviceClass = new $serviceClass($this->registry);
+        $this->clClass = $serviceClass;
+        if(!is_callable(array($serviceClass, $this->action)))
         {
-            $controllerAction = "index";
+            $serviceAction = "index";
         }
         else{
-            $controllerAction = $this->action;
+            $serviceAction = $this->action;
         }
 
-        $controllerClass->$controllerAction();
+        if($_SERVER['REQUEST_METHOD'] !== $serviceClass->getType($serviceAction))
+        {
+            throw new ApplicationException("Unknown request type, the service you have requested is unknown");
+        }
+
+
+        return $serviceClass->$serviceAction();
     }
 
     /**
-     * Prepares the action of the requested controller
+     * Prepares the action of the requested services
      * @param $route
      * @return string
      */
-    public function getControllerReady($route)
+    public function getServiceReady($route)
     {
         if(!empty($route))
         {
             $routeArray = explode("/", $route);
-            $this->controller = $routeArray[0];
+            $this->service = $routeArray[0];
             if(isset($routeArray[1]))
             {
                 $this->action = $routeArray[1];
             }
         }
 
-        if(empty($this->controller))
+        if(empty($this->service))
         {
-            $this->controller = "index";
+            $this->service = "index";
         }
 
         if(empty($this->action))
@@ -114,7 +115,7 @@ class Router {
             $this->action = "index";
         }
 
-        return $this->path.$this->controller."Controller.php";
+        return $this->path.$this->service."Service.php";
     }
 
 
