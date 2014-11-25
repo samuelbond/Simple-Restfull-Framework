@@ -35,7 +35,7 @@ class Router {
     }
 
     /**
-     * Sets the path to the requested services
+     * Sets the path to the requested service
      * @param $path
      * @throws \exceptions\InvalidPathException
      */
@@ -68,7 +68,7 @@ class Router {
          $this->service = "pagenotfound";
         }
 
-        $serviceClass = '\\services\\'.$this->service."Service";
+        $serviceClass = '\\service\\'.$this->service."Service";
         $serviceClass = new $serviceClass($this->registry);
         $this->clClass = $serviceClass;
         if(!is_callable(array($serviceClass, $this->action)))
@@ -89,7 +89,7 @@ class Router {
     }
 
     /**
-     * Prepares the action of the requested services
+     * Prepares the action of the requested service
      * @param $route
      * @return string
      */

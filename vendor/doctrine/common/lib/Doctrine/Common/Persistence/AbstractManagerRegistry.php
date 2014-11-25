@@ -83,7 +83,7 @@ abstract class AbstractManagerRegistry implements ManagerRegistry
     }
 
     /**
-     * Fetches/creates the given services.
+     * Fetches/creates the given service.
      *
      * A service in this context is connection or a manager instance.
      *
@@ -94,7 +94,7 @@ abstract class AbstractManagerRegistry implements ManagerRegistry
     abstract protected function getService($name);
 
     /**
-     * Resets the given services.
+     * Resets the given service.
      *
      * A service in this context is connection or a manager instance.
      *

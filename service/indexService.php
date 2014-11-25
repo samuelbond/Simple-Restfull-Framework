@@ -8,7 +8,7 @@
  * Copyright 2014 Plati Tech Limited, All Rights Reserved
  */
 
-namespace services;
+namespace service;
 
 
 use application\BaseService;
@@ -22,7 +22,7 @@ class indexService extends BaseService{
     );
 
     /**
-     * The default action for all services
+     * The default action for all service
      * @return array
      */
     public function index(){

@@ -25,9 +25,9 @@ class RouterTest extends \PHPUnit_Framework_TestCase{
     public function testController()
     {
         $router = new Router(new \stdClass());
-        $router->loadService("index", _SITE_PATH."services/");
+        $router->loadService("index", _SITE_PATH."service/");
 
-        $this->assertTrue($router->clClass instanceof indexServices, "Failed to create requested services");
+        $this->assertTrue($router->clClass instanceof indexServices, "Failed to create requested service");
     }
 
 } 

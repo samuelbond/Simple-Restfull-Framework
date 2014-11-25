@@ -41,7 +41,7 @@ Abstract class BaseService {
 
 
     /**
-     * The default action for all services
+     * The default action for all service
      * @return mixed
      */
     abstract public function index();

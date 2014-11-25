@@ -32,7 +32,7 @@ $route = @$_GET['rt'];
 $response = null;
 try
 {
-    $response = $registry->router->loadService($route, _SITE_PATH."services".DIRECTORY_SEPARATOR);
+    $response = $registry->router->loadService($route, _SITE_PATH."service".DIRECTORY_SEPARATOR);
 }
 catch (\Exception $ex)
 {
