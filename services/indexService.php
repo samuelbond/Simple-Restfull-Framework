@@ -1,9 +1,11 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: samuel
- * Date: 15/07/14
- * Time: 14:30
+ *
+ * Simple Restful Framework
+ * @version 1.0
+ *
+ * Created By Samuel Izuchi Amaziro
+ * Copyright 2014 Plati Tech Limited, All Rights Reserved
  */
 
 namespace services;
