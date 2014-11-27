@@ -1,6 +1,6 @@
 {
-    "name": "plati-tech/simple-mvc",
-    "description": "A Simple MVC framework with component style",
+    "name": "plati-tech/simple-rest",
+    "description": "A Simple restful framework with component style",
     "require": {
         "php": ">=5.3.0",
         "doctrine/orm": "2.4",
