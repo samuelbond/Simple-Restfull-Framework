@@ -64,8 +64,9 @@ class Router {
 
         $serviceFile = $this->getServiceReady($route);
 
-        if(!is_readable($serviceFile)){
-         $this->service = "pagenotfound";
+        if(!is_readable($serviceFile))
+        {
+            throw new ApplicationException("Unknown service, the service you have requested is unknown");
         }
 
         $serviceClass = '\\service\\'.$this->service."Service";
@@ -95,7 +96,7 @@ class Router {
      */
     public function getServiceReady($route)
     {
-        if(!empty($route))
+        if(!is_null($route) && $route !== "" && $route !== " ")
         {
             $routeArray = explode("/", $route);
             $this->service = $routeArray[0];

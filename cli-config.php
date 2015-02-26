@@ -9,9 +9,9 @@
  */
 
 require_once "bootstrap.php";
-$entity = new \application\AbstractEntityManager();
+$entity = new \driver\DatabaseDriver();
 
-$entityManager = $entity->createEntityManager();
+$entityManager = $entity->loadDriver();
 
 
 $helperSet = new \Symfony\Component\Console\Helper\HelperSet(array(

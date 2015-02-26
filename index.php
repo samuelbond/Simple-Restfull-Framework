@@ -36,11 +36,12 @@ try
 }
 catch (\Exception $ex)
 {
-    echo $ex->getMessage();
-    return;
+    $response = array("error" => $ex->getMessage());
 }
 
-$out = new \response\ResponseWrapper($settings['response_type'], $response);
+header('Content-Type: application/'.\application\System::getApplicationType());
+
+$out = new \response\ResponseWrapper(strtoupper(\application\System::getApplicationType()), $response);
 echo $out->getOutput();
 
 //End

@@ -28,7 +28,7 @@ $bootstrap = _SITE_PATH."autoloader".DIRECTORY_SEPARATOR.'autoloader.php';
 
 require_once $bootstrap;
 
-spl_autoload_register("\autoloader\Autoloader::load");
+spl_autoload_register("\\autoloader\\Autoloader::load");
 
 $configuration = _SITE_PATH."configuration.php";
 
@@ -48,3 +48,7 @@ require_once $composerAutoloader;
  */
 
 define('APPLICATION_ENV', "development"); // Could be development or production
+
+$dbDriver = new \driver\DatabaseDriver();
+
+\application\System::setDatabaseDriver($dbDriver->loadDriver());
