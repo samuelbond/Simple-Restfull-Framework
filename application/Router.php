@@ -13,6 +13,7 @@ namespace application;
 
 use exceptions\ApplicationException;
 use exceptions\InvalidPathException;
+use ReflectionClass;
 
 /**
  * Class Router
@@ -69,7 +70,7 @@ class Router {
             throw new ApplicationException("Unknown service, the service you have requested is unknown");
         }
 
-        $serviceClass = '\\service\\'.$this->service."Service";
+        $serviceClass = '\\service\\'.$this->service;
         $serviceClass = new $serviceClass($this->registry);
         $this->clClass = $serviceClass;
         if(!is_callable(array($serviceClass, $this->action)))
@@ -80,7 +81,9 @@ class Router {
             $serviceAction = $this->action;
         }
 
-        if($_SERVER['REQUEST_METHOD'] !== $serviceClass->getType($serviceAction))
+        $requestType = $this->parseRequestTypeAnnotation($this->requestTypeAnnotationReader(get_class($serviceClass), $serviceAction));
+
+        if($_SERVER['REQUEST_METHOD'] !== $requestType)
         {
             throw new ApplicationException("Unknown request type, the service you have requested is unknown");
         }
@@ -108,7 +111,7 @@ class Router {
 
         if(empty($this->service))
         {
-            $this->service = "index";
+            $this->service = "indexService";
         }
 
         if(empty($this->action))
@@ -116,8 +119,50 @@ class Router {
             $this->action = "index";
         }
 
-        return $this->path.$this->service."Service.php";
+        return $this->path.$this->service.".php";
     }
 
 
+    /**
+     * Parses a method of a given class to get all annotations in the doc
+     * @param $class
+     * @param string $method
+     * @return array
+     */
+    public function requestTypeAnnotationReader($class, $method = "index")
+    {
+        $reflect = new ReflectionClass($class);
+        $methodDoc = $reflect->getMethod($method)->getDocComment();
+        preg_match_all("#@(RequestType\\s.*?)\\n#s", $methodDoc, $annotations);
+        return $annotations[1];
+    }
+
+
+    /**
+     * Parses a given class to get all annotations in the doc
+     * @param $class
+     * @return array
+     */
+    public function classAnnotationReader($class)
+    {
+        $reflect = new ReflectionClass($class);
+        $methodDoc = $reflect->getDocComment();
+        preg_match_all('#@(.*?)\n#s', $methodDoc, $annotations);
+        return $annotations[1];
+    }
+
+    /**
+     * Parses and returns the request type
+     * @param array $annotation
+     * @return string
+     */
+    protected function parseRequestTypeAnnotation(array $annotation)
+    {
+        $n = explode("=", $annotation[0]);
+        $patterns[0] = "/\"/";
+        $patterns[1] = "/\\)/";
+        $str = preg_replace($patterns, "", $n[1]);
+
+        return $str;
+    }
 }

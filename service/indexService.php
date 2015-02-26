@@ -12,8 +12,11 @@ namespace service;
 
 
 use application\BaseService;
-use application\HTTP;
 
+/**
+ * Class indexService
+ * @package service
+ */
 class indexService extends BaseService{
 
     protected $types = array(
@@ -23,10 +26,12 @@ class indexService extends BaseService{
 
     /**
      * The default action for all service
+     * @param RequestType
      * @return array
      */
     public function index(){
-        return array("status" => "Rest is alive");
+
+        return array("message" => "hello world");
     }
 
 
@@ -38,7 +43,7 @@ class indexService extends BaseService{
     /**
      * This method returns the HTTP type of a given service
      * @param $serviceName
-     * @return HTTP Request Type
+     * @return string Request Type
      */
     public function getType($serviceName)
     {
