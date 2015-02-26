@@ -19,35 +19,24 @@ use application\BaseService;
  */
 class indexService extends BaseService{
 
-    protected $types = array(
-        "index" => "GET",
-        "randomNumber" => "GET",
-    );
 
     /**
      * The default action for all service
-     * @param RequestType
+     * @RequestType (type="PUT")
      * @return array
      */
     public function index(){
 
-        return array("message" => "hello world");
-    }
-
-
-    public function randomNumber()
-    {
-        return array("number is: " => rand(100, 1000));
+        return array("welcome" => "Simple Restful Framework");
     }
 
     /**
-     * This method returns the HTTP type of a given service
-     * @param $serviceName
-     * @return string Request Type
+     * @RequestType (type="GET")
+     * @return array
      */
-    public function getType($serviceName)
+    public function helloworld()
     {
-       return ((isset($this->types[$serviceName])) ? $this->types[$serviceName] : "NONE");
+        return array("hello" => "world");
     }
 
 
