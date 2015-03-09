@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<ruleset name="sa-code-standard">
+    <description>simple-restful-framework</description>
+
+    <rule ref="Generic.PHP.DisallowShortOpenTag"/>
+    <rule ref="Generic.WhitSpace.DisallowTabIndent"/>
+    <rule ref="Generic.WhiteSpace.ScopeIndent"/>
+</ruleset>
