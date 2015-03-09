@@ -32,8 +32,6 @@ class DatabaseFactory {
      */
     public static function createDatabase(Database $dbObject, $new = false)
     {
-        $conn = null;
-
          if(self::$databaseInstance == null || $new == true && $dbObject->getDbName() !== self::$databaseName)
          {
              try
