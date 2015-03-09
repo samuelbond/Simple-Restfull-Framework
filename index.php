@@ -25,23 +25,31 @@ require_once "bootstrap.php";
  */
 
 
-$registry = new \application\Registry();
-$registry->router = new \application\Router($registry);
+$router = new \application\Router();
 $route = "";
 $route = @$_GET['rt'];
+$route = preg_replace('/(\.php)$/i', '', $route);
+
 $response = null;
 try
 {
-    $response = $registry->router->loadService($route, _SITE_PATH."service".DIRECTORY_SEPARATOR);
+    $response = $router->loadService($route, _SITE_PATH."service".DIRECTORY_SEPARATOR);
 }
 catch (\Exception $ex)
 {
     $response = array("error" => $ex->getMessage());
 }
 
-header('Content-Type: application/'.\application\System::getApplicationType());
+/**
+ * If system output is enabled the output of the
+ * Requested service will be printed out
+ */
+if(\application\System::getSystemOutput())
+{
+    header('Content-Type: application/'.\application\System::getApplicationType());
 
-$out = new \response\ResponseWrapper(strtoupper(\application\System::getApplicationType()), $response);
-echo $out->getOutput();
+    $out = new \response\ResponseWrapper(strtoupper(\application\System::getApplicationType()), $response);
+    echo $out->getOutput();
+}
 
 //End

@@ -7,10 +7,10 @@
  * Created By Samuel Izuchi Amaziro
  * Copyright 2014 Plati Tech Limited, All Rights Reserved
  */
-namespace exceptions;
+
+namespace exception;
 
 
-class InvalidPathException extends \Exception{
+class ApplicationException extends \Exception{
 
-
-}
+} 

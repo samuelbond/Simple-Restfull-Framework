@@ -8,9 +8,10 @@
  * Copyright 2014 Plati Tech Limited, All Rights Reserved
  */
 
-namespace exceptions;
+
+namespace exception;
 
 
-class DatabaseException extends \Exception{
+class MissingParametersException extends \Exception{
 
 } 

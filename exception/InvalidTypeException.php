@@ -8,7 +8,7 @@
  * Copyright 2014 Plati Tech Limited, All Rights Reserved
  */
 
-namespace exceptions;
+namespace exception;
 
 
 class InvalidTypeException extends \Exception{

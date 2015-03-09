@@ -11,8 +11,8 @@
 namespace application;
 
 
-use exceptions\ApplicationException;
-use exceptions\InvalidPathException;
+use exception\ApplicationException;
+use exception\InvalidPathException;
 use ReflectionClass;
 
 /**
@@ -28,17 +28,9 @@ class Router {
     public $clClass;
 
     /**
-     * @param $registry
-     */
-    public function __construct($registry)
-    {
-        $this->registry = $registry;
-    }
-
-    /**
      * Sets the path to the requested service
      * @param $path
-     * @throws \exceptions\InvalidPathException
+     * @throws \exception\InvalidPathException
      */
     public function setServicePath($path)
     {
@@ -75,7 +67,7 @@ class Router {
         $this->clClass = $serviceClass;
         if(!is_callable(array($serviceClass, $this->action)))
         {
-            $serviceAction = "index";
+            throw new ApplicationException("Unknown service, the service you have requested is unknown");
         }
         else{
             $serviceAction = $this->action;
@@ -83,7 +75,7 @@ class Router {
 
         $requestType = $this->parseRequestTypeAnnotation($this->requestTypeAnnotationReader(get_class($serviceClass), $serviceAction));
 
-        if($_SERVER['REQUEST_METHOD'] !== $requestType)
+        if(trim($_SERVER['REQUEST_METHOD']) !== trim($requestType))
         {
             throw new ApplicationException("Unknown request type, the service you have requested is unknown");
         }

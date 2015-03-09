@@ -13,7 +13,7 @@ Abstract class AbstractDAO {
 
     /**
      * Contains access to data store depending on type of DAO
-     * @var mixed
+     * @var mixed|\PDO|\Mysqli|\Doctrine\ORM\EntityManager
      */
     protected static $conn;
 

@@ -26,9 +26,14 @@ Abstract class BaseService {
         $this->registry = $registry;
     }
 
+    public function successfulRequest()
+    {
+        return array("success" => "request was successful", "status" => 0);
+    }
 
     /**
      * The default action for all service
+     * @RequestType (type="GET")
      * @return mixed
      */
     abstract public function index();
