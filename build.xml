@@ -5,10 +5,6 @@
 
     <!-- Uncomment the following when the tools are in ${basedir}/vendor/bin -->
     <!-- <property name="toolsdir" value="${basedir}/vendor/bin/"/> -->
-    <fileset id="php-files" dir="${basedir}">
-        <exclude name="vendor/**"/>
-        <exclude name="build/**"/>
-    </fileset>
 
     <target name="build"
             depends="prepare,lint,phploc-ci,pdepend,phpmd-ci,phpcs-ci,phpcpd-ci,phpunit,phpdox"
