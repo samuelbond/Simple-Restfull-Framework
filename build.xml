@@ -62,6 +62,10 @@
                 <include name="**/*.php" />
                 <modified />
             </fileset>
+            <fileset id="php-files" dir="${basedir}">
+                <exclude name="vendor/**"/>
+                <exclude name="build/**"/>
+            </fileset>
         </apply>
     </target>
 
