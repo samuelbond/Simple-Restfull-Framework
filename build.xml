@@ -165,8 +165,10 @@
             depends="prepare"
             description="Run unit tests with PHPUnit">
         <exec executable="${toolsdir}phpunit" failonerror="false">
-            <arg line="--coverage-clover ${basedir}/build/logs/clover.xml --coverage-html ${basedir}/build/logs/."/>
-            <arg value="--configuration"/>
+            <arg line="--log-junit ${basedir}/build/logs/junit.xml
+            --coverage-clover ${basedir}/build/logs/clover.xml
+            --coverage-html ${basedir}/build/logs/."/>
+            <arg value="--configuration "/>
             <arg path="${basedir}/build/phpunit.xml"/>
             <arg path="${basedir}/src"/>
         </exec>
