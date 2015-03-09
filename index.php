@@ -33,7 +33,7 @@ $route = preg_replace('/(\.php)$/i', '', $route);
 $response = null;
 try
 {
-    $response = $router->loadService($route, _SITE_PATH."service".DIRECTORY_SEPARATOR);
+    $response = $router->loadService($route, APP_PATH."service".DIRECTORY_SEPARATOR);
 }
 catch (\Exception $ex)
 {

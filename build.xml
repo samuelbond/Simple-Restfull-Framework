@@ -53,14 +53,12 @@
         <apply executable="php" failonerror="true">
             <arg value="-l" />
 
-            <fileset dir="${basedir}">
+            <fileset dir="${basedir}/src">
                 <include name="**/*.php" />
-                <exclude name="vendor/**"/>
-                <exclude name="build/**"/>
                 <modified />
             </fileset>
 
-            <fileset dir="${basedir}/test">
+            <fileset dir="${basedir}/src/test">
                 <include name="**/*.php" />
                 <modified />
             </fileset>
@@ -71,8 +69,8 @@
             description="Measure project size using PHPLOC and print human readable output. Intended for usage on the command line.">
         <exec executable="${toolsdir}phploc">
             <arg value="--count-tests" />
-            <arg path="${basedir}/" />
-            <arg path="${basedir}/test" />
+            <arg path="${basedir}/src/" />
+            <arg path="${basedir}/src/test" />
         </exec>
     </target>
 
@@ -85,8 +83,8 @@
             <arg path="${basedir}/build/logs/phploc.csv" />
             <arg value="--log-xml" />
             <arg path="${basedir}/build/logs/phploc.xml" />
-            <arg path="${basedir}" />
-            <arg path="${basedir}/test" />
+            <arg path="${basedir}/src" />
+            <arg path="${basedir}/src/test" />
         </exec>
     </target>
 
@@ -97,14 +95,14 @@
             <arg value="--jdepend-xml=${basedir}/build/logs/jdepend.xml" />
             <arg value="--jdepend-chart=${basedir}/build/pdepend/dependencies.svg" />
             <arg value="--overview-pyramid=${basedir}/build/pdepend/overview-pyramid.svg" />
-            <arg path="${basedir}" />
+            <arg path="${basedir}/src" />
         </exec>
     </target>
 
     <target name="phpmd"
             description="Perform project mess detection using PHPMD and print human readable output. Intended for usage on the command line before committing.">
         <exec executable="${toolsdir}phpmd">
-            <arg path="${basedir}" />
+            <arg path="${basedir}/src" />
             <arg value="text" />
             <arg path="${basedir}/build/phpmd.xml" />
         </exec>
@@ -114,7 +112,7 @@
             depends="prepare"
             description="Perform project mess detection using PHPMD and log result in XML format. Intended for usage within a continuous integration environment.">
         <exec executable="${toolsdir}phpmd">
-            <arg path="${basedir}" />
+            <arg path="${basedir}/src" />
             <arg value="xml" />
             <arg path="${basedir}/build/phpmd.xml" />
             <arg value="--reportfile" />
@@ -128,8 +126,8 @@
             <arg value="--standard=PSR2" />
             <arg value="--extensions=php" />
             <arg value="--ignore=autoload.php" />
-            <arg path="${basedir}" />
-            <arg path="${basedir}/test" />
+            <arg path="${basedir}/src/" />
+            <arg path="${basedir}/src/test" />
         </exec>
     </target>
 
@@ -142,14 +140,14 @@
             <arg value="--standard=PSR2" />
             <arg value="--extensions=php" />
             <arg value="--ignore=autoload.php" />
-            <arg path="${basedir}" />
+            <arg path="${basedir}src/" />
         </exec>
     </target>
 
     <target name="phpcpd"
             description="Find duplicate code using PHPCPD and print human readable output. Intended for usage on the command line before committing.">
         <exec executable="${toolsdir}phpcpd">
-            <arg path="${basedir}" />
+            <arg path="${basedir}/src" />
         </exec>
     </target>
 
@@ -159,7 +157,7 @@
         <exec executable="${toolsdir}phpcpd">
             <arg value="--log-pmd" />
             <arg path="${basedir}/build/logs/pmd-cpd.xml" />
-            <arg path="${basedir}" />
+            <arg path="${basedir}/src" />
         </exec>
     </target>
 

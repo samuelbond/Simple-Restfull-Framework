@@ -37,7 +37,7 @@ class Router {
 
         if(!(is_dir($path)))
         {
-            throw new InvalidPathException("Invalid Path Exception\nInvalid Controller Path provided: ");
+            throw new InvalidPathException("Invalid Path, The Path provided is not a valid path");
         }
         $this->path = $path;
 

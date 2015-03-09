@@ -22,7 +22,7 @@ class indexService extends BaseService{
 
     /**
      * The default action for all service
-     * @RequestType (type="PUT")
+     * @RequestType (type="GET")
      * @return array
      */
     public function index(){

@@ -17,6 +17,7 @@
 $sitepath = realpath(dirname(__FILE__));
 $sitepath = $sitepath.DIRECTORY_SEPARATOR;
 define('_SITE_PATH', $sitepath);
+define('APP_PATH', $sitepath.'src'.DIRECTORY_SEPARATOR);
 
 /**
  * Site Bootstrapping
@@ -24,11 +25,14 @@ define('_SITE_PATH', $sitepath);
  * Here we register all our autoloaders
  * So they all can fall through in case one fails
  */
-$bootstrap = _SITE_PATH."autoloader".DIRECTORY_SEPARATOR.'autoloader.php';
+$bootstrap = function($className){
+    $path = _SITE_PATH.'src'.DIRECTORY_SEPARATOR.str_replace("\\", DIRECTORY_SEPARATOR, $className) . '.php';
+    if(file_exists($path))
+    {
+        require_once $path;
+    }};
 
-require_once $bootstrap;
-
-spl_autoload_register("\\autoloader\\Autoloader::load");
+spl_autoload_register($bootstrap);
 
 $configuration = _SITE_PATH."configuration.php";
 
